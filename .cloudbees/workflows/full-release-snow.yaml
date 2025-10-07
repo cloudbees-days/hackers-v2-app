@@ -321,7 +321,6 @@ jobs:
     with:
       manifest: ${{ inputs.manifest }}
       environment: hackers-v2-qa
-      dockerUser: ${{ vars.DOCKERHUB_USER }}
     secrets: inherit
     vars: inherit
   enable-feature-flags-qa:
@@ -656,7 +655,6 @@ jobs:
     with:
       manifest: ${{ inputs.manifest }}
       environment: hackers-v2-staging
-      dockerUser: ${{ vars.DOCKERHUB_USER }}
     secrets: inherit
     vars: inherit
   enable-feature-flags-staging:
@@ -1013,7 +1011,6 @@ jobs:
     with:
       manifest: ${{ inputs.manifest }}
       environment: hackers-v2-prod
-      dockerUser: ${{ vars.DOCKERHUB_USER }}
     secrets: inherit
     vars: inherit
   run-smoke-tests:
