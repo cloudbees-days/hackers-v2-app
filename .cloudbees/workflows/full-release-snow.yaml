@@ -337,6 +337,7 @@ jobs:
           application-name: hackers-v2-app
           environment-name: hackers-v2-qa
           flag-name: default.score
+          api-url: ${{ vars.UNIFY_API_URL }}
           use-org-as-app: true
           flag-config: |
             enabled: true
@@ -671,6 +672,7 @@ jobs:
           application-name: hackers-v2-app
           environment-name: hackers-v2-staging
           flag-name: default.score
+          api-url: ${{ vars.UNIFY_API_URL }}
           use-org-as-app: true
           flag-config: |
             enabled: true
@@ -1209,6 +1211,7 @@ jobs:
           application-name: hackers-v2-app
           environment-name: hackers-v2-prod
           flag-name: default.score
+          api-url: ${{ vars.UNIFY_API_URL }}
           use-org-as-app: true
           flag-config: |
             enabled: true
