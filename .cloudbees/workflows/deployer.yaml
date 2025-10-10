@@ -14,7 +14,7 @@ on:
 jobs:
   hackers-api:
     if: ${{ fromJSON(inputs.manifest)['hackers-v2-api']['cloudbeesdemo/hackers-api'].deploy }}
-    uses: cloudbees-days/hackers-v2-workflows/helm-deploy.yaml
+    uses: cloudbees-days/hackers-v2-api/.cloudbees/workflows/deploy.yaml
     with:
       artifactVersion: ${{ fromJSON(inputs.manifest)['hackers-v2-api']['cloudbeesdemo/hackers-api'].version }}
       artifact-id: ${{ fromJSON(inputs.manifest)['hackers-v2-api']['cloudbeesdemo/hackers-api'].id }}
@@ -23,7 +23,7 @@ jobs:
     vars: inherit
   hackers-auth:
     if: ${{ fromJSON(inputs.manifest)['hackers-v2-auth']['cloudbeesdemo/hackers-auth'].deploy }}
-    uses: cloudbees-days/hackers-v2-workflows/helm-deploy.yaml
+    uses: cloudbees-days/hackers-v2-auth/.cloudbees/workflows/deploy.yaml
     with:
       artifactVersion: ${{ fromJSON(inputs.manifest)['hackers-v2-auth']['cloudbeesdemo/hackers-auth'].version }}
       artifact-id: ${{ fromJSON(inputs.manifest)['hackers-v2-auth']['cloudbeesdemo/hackers-auth'].id }}
@@ -32,7 +32,7 @@ jobs:
     vars: inherit
   hackers-web:
     if: ${{ fromJSON(inputs.manifest)['hackers-v2-web']['cloudbeesdemo/hackers-web'].deploy }}
-    uses: cloudbees-days/hackers-v2-workflows/helm-deploy.yaml
+    uses: cloudbees-days/hackers-v2-web/.cloudbees/workflows/deploy.yaml
     with:
       artifactVersion: ${{ fromJSON(inputs.manifest)['hackers-v2-web']['cloudbeesdemo/hackers-web'].version }}
       artifact-id: ${{ fromJSON(inputs.manifest)['hackers-v2-web']['cloudbeesdemo/hackers-web'].id }}
